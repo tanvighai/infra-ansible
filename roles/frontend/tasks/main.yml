@@ -61,7 +61,7 @@
          # remote_src: yes
       - name: install filebeat
         ansible.builtin.import_role:
-          name: common
+          name: elk
           tasks_from: filebeat
 
 
