@@ -34,7 +34,7 @@ scrape_configs:
     # scheme defaults to 'http'.
 
     static_configs:
-      - targets: [ "f1.tanvi12online.net:9100" , "b1.tanvi12online.net:9100" , "m1.tavi12online.net:9100" ]
+      - targets: [ "f1.tanvi12online.net:9100" , "b1.tanvi12online.net:9100" , "m1.tanvi12online.net:9100" ]
 
   - job_name: 'node'
     ec2_sd_configs:
