@@ -13,12 +13,12 @@ receivers:
         auth_username: {{ lookup('aws_ssm', 'prometheus-email-userame', region='us-east-1' ) }}
         auth_password: {{ lookup('aws_ssm', 'prometheus-email-password', region='us-east-1' ) }}
         require_tls: true
-  - source_match:
-      severity: 'critical'
-
-      #from all the alerts if any alert with severity "critical" alertmanager will be sending an email notification
-
-#    target_match:
-#      severity: 'warning'
-    equal: ['alertname', 'dev', 'instance']
+#  - source_match:
+#      severity: 'critical'
+#
+#      #from all the alerts if any alert with severity "critical" alertmanager will be sending an email notification
+#
+##    target_match:
+##      severity: 'warning'
+#    equal: ['alertname', 'dev', 'instance']
 
