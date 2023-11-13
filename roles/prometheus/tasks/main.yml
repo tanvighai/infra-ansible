@@ -16,3 +16,8 @@
     src: record.yml
     dest: /opt/prometheus/record.yml
 
+
+- name: copy prometheus record file
+  ansible.builtin.template:
+    src: alerts.yml
+    dest: /opt/prometheus/alerts.yml
