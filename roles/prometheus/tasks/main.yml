@@ -9,15 +9,18 @@
     state: restarted
 #    enable: yes
 
-
-
 - name: copy prometheus record file
   ansible.builtin.template:
     src: record.yml
     dest: /opt/prometheus/record.yml
 
 
-- name: copy prometheus record file
+- name: copy prometheus alert file
   ansible.builtin.template:
     src: alerts.yml
     dest: /opt/prometheus/alerts.yml
+
+- name: copy prometheus alertmanager file
+  ansible.builtin.template:
+    src: alertmanager.yml
+    dest: /opt/alertmanager/alertmanager.yml
