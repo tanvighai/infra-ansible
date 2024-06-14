@@ -1,0 +1,22 @@
+- name: Update jenkins ip in Route53
+  hosts: localhost
+  tasks:
+#      - name: Update Jenkins IP
+#        amazon.aws.route53:
+#          state: present
+#          zone: tanvi12online.net
+#          record: jenkins.tanvi12online.net
+#          type: A
+#          ttl: 10
+#          value: [ip address]
+#          wait: true
+
+    - name: List all EIP addresses for a VM
+      amazon.aws.ec2_eip_info:
+        filters:
+          instance-id:
+      register: out
+
+    - name: print
+      debug:
+        msg: "{{out}}"
